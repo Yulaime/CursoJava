@@ -1,0 +1,215 @@
+{
+	"info": {
+		"_postman_id": "bb1922ea-1067-46ee-99ba-ceb1a2458b14",
+		"name": "platzi-market",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19837522",
+		"_collection_link": "https://ticnowlabs.postman.co/workspace/Team-Workspace~6056e6c6-cfd6-455a-80eb-8d5c2c88f320/collection/19837522-bb1922ea-1067-46ee-99ba-ceb1a2458b14?action=share&source=collection_link&creator=19837522"
+	},
+	"item": [
+		{
+			"name": "Get Products",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhbGVqYW5kcm8iLCJpYXQiOjE1OTU2MTgzODgsImV4cCI6MTU5NTY1NDM4OH0.MNDlElN415W872NJ80KrHJiG40BZHloCOOAV3x5999g",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8090/CursoJava/api/products/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"CursoJava",
+						"api",
+						"products",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get a product",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/CursoJava/api/products/10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"CursoJava",
+						"api",
+						"products",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get products by category",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/CursoJava/api/products/category/3",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"CursoJava",
+						"api",
+						"products",
+						"category",
+						"3"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create product",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"name\": \"Lechuga\",\n        \"categoryId\": 1,\n        \"price\": 2000.0,\n        \"stock\": 60,\n        \"active\": true\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/CursoJava/api/products/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"CursoJava",
+						"api",
+						"products",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete product",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/CursoJava/api/products/delete/51",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"CursoJava",
+						"api",
+						"products",
+						"delete",
+						"51"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all purchases",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/platzi-market/api/purchases/all",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"platzi-market",
+						"api",
+						"purchases",
+						"all"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get purchases by client",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/platzi-market/api/purchases/client/4546221",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"platzi-market",
+						"api",
+						"purchases",
+						"client",
+						"4546221"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Save purchase",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"clientId\": \"4546221\",\n        \"date\": \"2000-12-31T13:40:00\",\n        \"paymentMethod\": \"E\",\n        \"comment\": \"\",\n        \"state\": \"P\",\n        \"items\": [\n            {\n                \"productId\": 1,\n                \"quantity\": 10,\n                \"total\": 3000.0,\n                \"active\": true\n            },\n            {\n                \"productId\": 3,\n                \"quantity\": 20,\n                \"total\": 14000.0,\n                \"active\": true\n            }\n        ]\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/CursoJava/api/purchases/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"CursoJava",
+						"api",
+						"purchases",
+						"save"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
